@@ -4,8 +4,13 @@ class Button {
     this.length = length;
     this.type = type;
     this.color = color;
+    this.props = { width, length, type, color };
+  }
+  onClick() {
+    console.log(this.props);
   }
 }
+
 let myNewOneClick = new Button(5, 4, 'button', 'green');
 console.log(myNewOneClick);
 
