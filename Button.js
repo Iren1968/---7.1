@@ -15,6 +15,11 @@ let myNewOneClick = new Button(5, 4, 'button', 'green');
 console.log(myNewOneClick);
 
 function testButton() {
-  !myNewOneClick.hasOwnProperty(width);
+  !myNewOneClick.hasOwnProperty(width, length, type, color);
 }
-console.log(myNewOneClick.width);
+console.log(
+  myNewOneClick.width,
+  myNewOneClick.length,
+  myNewOneClick.type,
+  myNewOneClick.color
+);
