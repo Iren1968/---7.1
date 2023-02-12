@@ -16,12 +16,31 @@ let expencesExamples = [
   },
 ];
 
+let dateMonth = [
+  'Январь',
+  'Февраль',
+  'Март',
+  'Апрель',
+  'Май',
+  'Июнь',
+  'Июль',
+  'Август',
+  'Сентябрь',
+  'Октябрь',
+  'Ноябрь',
+  'Декабрь',
+];
+
 expencesExamples.forEach((element) => {
   let sumExpences = 0;
+  let month = -1;
   yearlyExpences = element.yearlyExpences;
   for (let Expence of yearlyExpences) {
+    month++;
     if (Expence > 1000) {
       sumExpences += Expence;
+    } else {
+      console.log(dateMonth[month]);
     }
   }
   console.log(sumExpences);
