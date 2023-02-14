@@ -30,10 +30,17 @@ let expencesExamples = [
 
 expencesExamples.forEach((element) => {
   let sumExpences = 0;
+  let months = [],
+    i;
+  for (i = 0; i < 12; i++) {
+    months.push(new Date(0, i).toLocaleString({}, { month: 'long' }));
+  }
   yearlyExpences = element.yearlyExpences;
   for (let Expence of yearlyExpences) {
     if (Expence > 1000) {
       sumExpences += Expence;
+    } else {
+      console.log(months[i]);
     }
   }
   console.log(sumExpences);
