@@ -1,3 +1,15 @@
+let yearlyExpences = [
+  2500, 6000, 7000, 6000, 3, 9, 700, 8000, 655, 5700, 340, 5390,
+];
+
+let sumExpences = 0;
+for (let Expence of yearlyExpences) {
+  if (Expence > 1000) {
+    sumExpences += Expence;
+  }
+}
+console.log(sumExpences);
+
 let expencesExamples = [
   {
     yearlyExpences: [
@@ -16,31 +28,12 @@ let expencesExamples = [
   },
 ];
 
-let dateMonth = [
-  'Январь',
-  'Февраль',
-  'Март',
-  'Апрель',
-  'Май',
-  'Июнь',
-  'Июль',
-  'Август',
-  'Сентябрь',
-  'Октябрь',
-  'Ноябрь',
-  'Декабрь',
-];
-
 expencesExamples.forEach((element) => {
   let sumExpences = 0;
-  let month = -1;
   yearlyExpences = element.yearlyExpences;
   for (let Expence of yearlyExpences) {
-    month++;
     if (Expence > 1000) {
       sumExpences += Expence;
-    } else {
-      console.log(dateMonth[month]);
     }
   }
   console.log(sumExpences);
