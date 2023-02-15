@@ -1,15 +1,3 @@
-let yearlyExpences = [
-  2500, 6000, 7000, 6000, 3, 9, 700, 8000, 655, 5700, 340, 5390,
-];
-
-let sumExpences = 0;
-for (let Expence of yearlyExpences) {
-  if (Expence > 1000) {
-    sumExpences += Expence;
-  }
-}
-console.log(sumExpences);
-
 let expencesExamples = [
   {
     yearlyExpences: [
@@ -28,20 +16,17 @@ let expencesExamples = [
   },
 ];
 
-expencesExamples.forEach((element) => {
-  let sumExpences = 0;
   let months = [],
     i;
   for (i = 0; i < 12; i++) {
     months.push(new Date(0, i).toLocaleString({}, { month: 'long' }));
   }
-  yearlyExpences = element.yearlyExpences;
-  for (let Expence of yearlyExpences) {
-    if (Expence > 1000) {
-      sumExpences += Expence;
-    } else {
-      console.log(months[i]);
+  for (let expence of expencesExamples) {
+    for(i=0;i < expence.yearlyExpences.length; i++) {
+      let exp = expence.yearlyExpences[i];
+
+    if (exp <= 1000) {
+      console.log(`В месяце ${months[i]} засходы составляли меньше 1000.`);
     }
-  }
-  console.log(sumExpences);
-});
+ }     
+}   
