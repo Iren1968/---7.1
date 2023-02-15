@@ -16,17 +16,17 @@ let expencesExamples = [
   },
 ];
 
-  let months = [],
-    i;
-  for (i = 0; i < 12; i++) {
-    months.push(new Date(0, i).toLocaleString({}, { month: 'long' }));
-  }
-  for (let expence of expencesExamples) {
-    for(i=0;i < expence.yearlyExpences.length; i++) {
-      let exp = expence.yearlyExpences[i];
+let months = [],
+  i;
+for (i = 0; i < 12; i++) {
+  months.push(new Date(0, i).toLocaleString({}, { month: 'long' }));
+}
+for (let expence of expencesExamples) {
+  for (i = 0; i < expence.yearlyExpences.length; i++) {
+    let exp = expence.yearlyExpences[i];
 
     if (exp <= 1000) {
-      console.log(`В месяце ${months[i]} засходы составляли меньше 1000.`);
+      console.log(`В месяце ${months[i]} расходы составляли меньше 1000.`);
     }
- }     
-}   
+  }
+}
